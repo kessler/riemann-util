@@ -4,11 +4,33 @@ Provides utilities and abstractions over node.js riemann.io client
 
 ## Install
 ```
-npm install riemann-util`
+npm install riemann-util
 ```
 
-## RiemannMonitor
+## class RiemannMonitor
 This class is used both for inheritance and simple monitoring.
+
+### Example
+```javascript
+
+var RiemannMonitor = require('riemann-util').RiemannMonitor;
+
+var monitor = new RiemannMonitor({
+	role: 'ninja',
+	ttl: 60 * 60, // 1 hour in seconds
+});
+
+var client = ... get riemann client, possibly asynchronously or not
+
+monitor.bindClient(client);
+
+monitor.send({
+	metric: 5,
+	description: 'bar and foo',
+	service: 'bar'
+});
+
+```
 
 ### RiemannMonitor.Ctor(config)
 contructs a riemann monitor.
@@ -69,28 +91,6 @@ Where it makes sense, configuration options can be overridden or augmented when 
 		// optional, ttl used for error events generated through errorListener, if omitted ttl is used instead.
 		errorTTL: 20,
 	}
-```
-
-## Example
-```javascript
-
-var RiemannMonitor = require('riemann-util').RiemannMonitor;
-
-var monitor = new RiemannMonitor({
-	role: 'ninja',
-	ttl: 60 * 60, // 1 hour in seconds
-});
-
-var client = ... get riemann client, possibly asynchronously or not
-
-monitor.bindClient(client);
-
-monitor.send({
-	metric: 5,
-	description: 'bar and foo',
-	service: 'bar'
-});
-
 ```
 
 ## Contributing

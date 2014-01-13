@@ -1,11 +1,15 @@
 {
   "name": "riemann-util",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "lib/riemann-util.js",
   "description": "Provides utilities and abstractions over node.js riemann.io client",
   "homepage": "https://github.com/kessler/riemann-util",
   "bugs": "https://github.com/kessler/riemann-util/issues",
-  "keywords": [ "riemann", "riemann.io", "monitoring" ],
+  "keywords": [
+    "riemann",
+    "riemann.io",
+    "monitoring"
+  ],
   "author": {
     "name": "Yaniv Kessler",
     "email": ""

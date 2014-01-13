@@ -2,6 +2,9 @@
   "name": "riemann-util",
   "version": "0.0.1",
   "main": "lib/riemann-util.js",
+  "scripts": {
+    "test": "grunt"
+  },
   "description": "Provides utilities and abstractions over node.js riemann.io client",
   "homepage": "https://github.com/kessler/riemann-util",
   "bugs": "https://github.com/kessler/riemann-util/issues",
@@ -30,7 +33,9 @@
     "load-grunt-tasks": "~0.2.0",
     "time-grunt": "~0.1.1",
     "jshint-stylish": "~0.1.3",
-    "grunt-mocha-test": "~0.7.0"
+    "grunt-mocha-test": "~0.7.0",
+    "grunt": "~0.4.2",
+    "grunt-cli": "~0.1.11"
   },
   "dependencies": {
     "ip": "~0.1.0"

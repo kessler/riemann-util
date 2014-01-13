@@ -3,7 +3,7 @@ var RiemannMonitor = require('../lib/RiemannMonitor');
 var $u = require('util');
 
 function MockClient() {
-	this.events = []
+	this.events = [];
 }
 
 MockClient.prototype.send = function(event) {
@@ -43,8 +43,10 @@ describe('Monitor hides the monitoring client from the application code', functi
 		});
 
 		it('throws an exception, when a config object is provided but missing a role key inside it or the role key is invalid', function() {
+			var topic;
+
 			try {
-				var topic = new RiemannMonitor({});
+				topic = new RiemannMonitor({});
 				topic.bindClient(mockClient);
 
 				assert.fail('expected an exception to be thrown');
@@ -53,7 +55,7 @@ describe('Monitor hides the monitoring client from the application code', functi
 			}
 
 			try {
-				var topic = new RiemannMonitor({ role: 1} );
+				topic = new RiemannMonitor({ role: 1} );
 				topic.bindClient(mockClient);
 
 				assert.fail('expected an exception to be thrown');
@@ -63,8 +65,9 @@ describe('Monitor hides the monitoring client from the application code', functi
 		});
 
 		it('throws an exception, when a config object is provided but missing a ttl key inside it or the ttl key is invalid', function() {
+			var topic;
 			try {
-				var topic = new RiemannMonitor({ role: 'role' });
+				topic = new RiemannMonitor({ role: 'role' });
 				topic.bindClient(mockClient);
 
 				assert.fail('expected an exception to be thrown');
@@ -73,7 +76,7 @@ describe('Monitor hides the monitoring client from the application code', functi
 			}
 
 			try {
-				var topic = new RiemannMonitor({ role: 'role', ttl: '12323' } );
+				topic = new RiemannMonitor({ role: 'role', ttl: '12323' } );
 				topic.bindClient(mockClient);
 
 				assert.fail('expected an exception to be thrown');
@@ -148,7 +151,7 @@ describe('Monitor hides the monitoring client from the application code', functi
 
 		it ('send an event', function() {
 			try {
-				topic.send({})
+				topic.send({});
 				assert.ok('all is good');
 			} catch (e) {
 				console.log(e);

@@ -1,6 +1,6 @@
 {
   "name": "riemann-util",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "lib/riemann-util.js",
   "scripts": {
     "test": "grunt"

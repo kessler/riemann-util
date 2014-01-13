@@ -1,0 +1,1 @@
+module.exports.RiemannMonitor = require('./lib/RiemannMonitor.js');

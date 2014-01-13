@@ -20,7 +20,7 @@ var monitor = new RiemannMonitor({
 	ttl: 60 * 60, // 1 hour in seconds
 });
 
-var client = ... get riemann client, possibly asynchronously or not
+var client = ... get a reference to riemann client somehow
 
 monitor.bindClient(client);
 

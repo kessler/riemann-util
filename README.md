@@ -8,7 +8,7 @@ npm install riemann-util
 ```
 
 ## class RiemannMonitor
-This class is used both for inheritance and simple monitoring.
+A small abstraction over riemann client that provides defaults, demands require fields and simplifies event sending. This class can be used as is or for building more complex subclasses.
 
 ### Example
 ```javascript

@@ -1,10 +1,10 @@
 # riemann-util [![Build Status](https://secure.travis-ci.org/kessler/riemann-util.png?branch=master)](http://travis-ci.org/kessler/riemann-util)
 
-Provides utilities and abstractions over node.js riemann.io client
+Provides utilities and abstractions over [node.js riemann.io client](https://github.com/perezd/riemann-nodejs-client)
 
 ## Install
 ```
-npm install riemann-util
+npm install riemann riemann-util
 ```
 
 ## class RiemannMonitor

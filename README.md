@@ -8,7 +8,7 @@ npm install riemann-util
 ```
 
 ## class RiemannMonitor
-A small abstraction over riemann client that provides defaults, demands require fields and simplifies event sending. This class can be used as is or for building more complex subclasses.
+A small abstraction over riemann client that provides defaults, demands required fields and simplifies event dispatching.
 
 ### Example
 ```javascript
